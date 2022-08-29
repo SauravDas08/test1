@@ -4,7 +4,331 @@
         <title>Shopping | Template</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"> 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-        <link rel="stylesheet" href="/src/shopperstyle.css">
+        
+        <style>
+            
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 4px -4px 4px gainsboro;
+}
+.nav-brand {
+    font-family: Arial;
+    font-size: 25px;
+    font-weight: bold;
+}
+.nav-menu span {
+    font-family: Arial;
+    margin-right: 20px;
+    font-weight: bold;
+}
+.nav-toolbar span {
+    font-family: Arial;
+    margin-right: 15px;
+}
+.site-title {
+    background-color: black;
+    color:white;
+    padding: 10px;
+    text-align: center;
+    font-family: Arial;
+    letter-spacing: 4px;
+}
+.site-banner {
+    margin-top: 10px;
+    display: flex;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    font-family: Arial;
+}
+.site-card1{
+    background-image: url("./img2.jpeg");
+    width: 400px;
+    height: 350px;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+.site-card2{
+    background-image: url("./mens1.jpg");
+    width: 400px;
+    height: 350px;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+.site-card3{
+    background-image: url("./baby1.jfif");
+    width: 400px;
+    height: 350px;
+    
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+.site-card1:hover, .site-card2:hover, .site-card3:hover {
+    opacity: 0.9;
+    transition: 2s;
+}
+button {
+    height: 50px;
+    background-color: rgba(249, 242, 242,0.7);
+    font-family: Arial;
+    font-weight: lighter;
+    font-size: 20px;
+    border: none;
+    
+}
+.shipping {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-family: Arial;
+    font-size: 12px;
+    padding: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 30px;
+}
+.main {
+    text-align: center;
+    padding: 50px;
+    font-family: Arial;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+p {
+    line-height: 30px;
+}
+.head1{
+      position: absolute;
+      margin-top: 130px;
+      margin-left: 30px;
+      color:deepskyblue;
+}
+.card1{
+      background-image: url(./img2.jpeg);
+      width: 625px;
+      height: 320px;
+     
+
+}
+.card2{
+      background-image: url(./men3.jpg );
+      width: 400px;
+      height: 320px;
+     
+}
+.container{
+     display: flex;
+     margin-left: 100px;
+     margin-right: 100px;
+      justify-content: space-between ;
+}
+.card4{
+      background-image: url(./boys.jpeg);
+      width: 640px;
+      height: 320px;
+     
+
+}
+.card3{
+      background-image: url(./girls1.jpg );
+      width: 400px;
+      height: 320px;
+     
+}
+.container2{
+     margin-top: 20px;
+     display: flex;
+     margin-left: 100px;
+     margin-right: 100px;
+      justify-content: space-between;
+}
+.catagorie {
+    display: flex;
+    flex-direction: row;
+      font-size: 20px;
+      font-weight: 500;
+      justify-content: space-between;
+      margin-left: 450px;
+      margin-right: 450px;
+      margin-bottom: 60px;
+      
+}
+
+.rowA{
+   display: flex;
+   justify-content:space-between;
+  margin-left: 100px;
+   margin-top: 25px;
+}
+.rowB{
+    display: flex;
+    justify-content:space-between;
+   margin-left: 100px;
+    margin-top: 25px;
+   margin-top: 20px
+}
+card-img{
+    height: 200px;
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.container-z{
+    background: red;
+}
+.card-footer{
+    line-height: 0px;
+    font-family: Arial;
+    word-spacing: normal;
+}
+.shipping h3{
+    font-size: 15px;
+}
+h2{
+    position: absolute;
+    margin-top: -470px;
+    margin-left: 400px;
+    font-size: 40px;
+    font-family: Arial;
+}
+.button-b{
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius:1px;
+    background-color:black;
+    position: absolute;
+    margin-left: 500px;
+    margin-top: -250px;
+    font-size: 20px;
+    font-family: Arial;
+}
+.heading-4{
+      margin-top: 60px;
+      line-height: 8px;
+      word-spacing: 4px;
+}
+h5{
+    font-size: 15px;
+    font-weight: 800;
+}
+.bigbanner{
+    margin-top: 50px;
+    
+}
+.card-footer span{
+    margin-top: 20px;
+}
+.heading-x{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 30px;
+    font-family: Arial;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    word-spacing: 4px;
+}
+.container-c ,.container-d ,.container-e{
+    height: 340px;
+    width: 300px;
+    border: 1px solid rgb(173, 169, 169);
+}
+
+.flotty-b{
+    float: right;
+    margin-top: -78px;
+    margin-right: 10px;
+}
+
+.xyz{
+    display: flex;
+    margin-left: 80px;
+    margin-right: 80px;
+     justify-content: space-between;
+}
+.ftr{
+ height:  560px;
+ width: 100%;
+ background-color: rgba(7, 7, 7, 0.877);
+ color: aliceblue;
+ margin-top: -20px;
+}
+.f-para{
+ text-align: center;
+ padding-top: 100px;
+ margin-top: px;
+ font-size: 27px;
+ font-weight: bold;
+ font-family: Arial           ;
+}
+.txt-box{
+ align-items: center;
+height: 60px;
+width: 360px;
+background-color: rgb(186, 179, 179);
+color: aliceblue;
+padding: 2px;
+border: none;
+}
+.eml-btn{
+ height: 60px;
+ width: 146px;
+ border-radius: 0px;
+ border: none;
+ margin-left: 10px;
+}
+.form{
+ display: flex;
+ margin-left: 350px;
+ margin-right: 350px;
+ justify-content: space-between;
+}
+.footer-menu{
+ display: flex;
+ justify-content: space-between;
+ margin-left: 100px;
+ margin-right: 100px;
+ padding-top: 60px;
+ line-height: 1.6;
+ 
+}
+.title{
+margin-bottom: 30px;
+font-weight: bold;
+}
+.final-hr{
+position: absolute;
+margin-top: -100px;
+width: 100%;
+color: antiquewhite;
+}
+.copyright{
+position: absolute;
+margin-top: -70px;
+word-spacing: 3px;
+letter-spacing: 0.9px;
+color: aliceblue;
+margin-left: 510px;
+}
+.shopnow{
+background-color: transparent;
+color: white;
+}
+        </style>
     </head>
     <body class="conainer">
         <header>
@@ -143,7 +467,7 @@
         <div>
             <div class="rowA">
                   <div class="card-img">
-                        <img src="../assets/3img.jpeg" alt="ban1" height="250" width="250">
+                        <img src="./3img.jpeg" alt="ban1" height="250" width="250">
                         <div class="card-footer">
                               <p>Mens Jacket</p>
                               <h5>Mens Jacket</h5>
@@ -151,7 +475,7 @@
                         </div>
                   </div>
                   <div class="card-img">
-                   <img src="../assets/2img.jpg" alt="ban1" height="250" width="250">
+                   <img src="./2img.jpg" alt="ban1" height="250" width="250">
                    <div class="card-footer">
                         <p>Ladies Jacket</p>
                         <h5>Kids Jacket</h5>
@@ -159,7 +483,7 @@
                   </div>
              </div>
              <div class="card-img">
-                   <img src="../assets/pic8.jpg" alt="ban1" height="250" width="250">
+                   <img src="./pic8.jpg" alt="ban1" height="250" width="250">
                    <div class="card-footer">
                         <p>Girls Dress</p>
                         <h5>Girls Frok</h5>
@@ -167,7 +491,7 @@
                   </div>
              </div>
              <div class="card-img">
-                   <img src="../assets/men2.1.jpg" alt="ban1" height="250px" width="250">
+                   <img src="./men2.1.jpg" alt="ban1" height="250px" width="250">
                    <div class="card-footer">
                         <p>Mens Formal</p>
                         <h5>Trousers</h5>
@@ -179,7 +503,7 @@
       <div>
        <div class="rowB">
              <div class="card-img">
-                   <img src="../assets/pic5.jpg" alt="ban1" height="250" width="250">
+                   <img src="./pic5.jpg" alt="ban1" height="250" width="250">
                    <div class="card-footer">
                         <p>Girls Top</p>
                         <h5>Girls Top Collection</h5>
@@ -187,7 +511,7 @@
                   </div>
              </div>
              <div class="card-img">
-              <img src="../assets/1img.jpg" alt="ban2" height="250" width="250">
+              <img src="./1img.jpg" alt="ban2" height="250" width="250">
               <div class="card-footer">
                   <p>Shoe</p>
                   <h5>Leather mid-heel Sandals</h5>
@@ -195,7 +519,7 @@
             </div>
         </div>
         <div class="card-img">
-              <img src="../assets/kids.1.jpg" alt="ban1" height="250" width="250">
+              <img src="./kids.1.jpg" alt="ban1" height="250" width="250">
               <div class="card-footer">
                   <p>Kids Fashion</p>
                   <h5>Kids Fashion</h5>
@@ -203,7 +527,7 @@
             </div>
         </div>
         <div class="card-img">
-              <img src="../assets/kids.1.jpg" alt="ban1" height="250" width="250">
+              <img src="./kids.1.jpg" alt="ban1" height="250" width="250">
               <div class="card-footer">
                   <p>Kids Fashion</p>
                   <h5>Kids Fashion</h5>
@@ -220,7 +544,7 @@
              <hr width="200px" noshade="80">
        </div>
        <div class="bigbanner">
-             <img src="../assets/inox.jpg" width="100%" height="550px"  >
+             <img src="./inox.jpg" width="100%" height="550px"  >
              <h2>Get -50% <br>  from Summer Collection</h2>
         <div >
               <button class="button-b">Shop Now<span class="bi bi-chevron-right"></span></button>        
@@ -233,7 +557,7 @@
        <div class="xyz">
                   <div class="container-c" style="padding: 20px ;">
                         <div class="flotty-a">
-                              <img src="../assets/girls1.jpg" height="70px" width="100px">
+                              <img src="./girls1.jpg" height="70px" width="100px">
                         </div>
                         <div class="flotty-b">
                               <p> Dresses<br>Cotton free dresses </p>
@@ -250,7 +574,7 @@
 
              <div class="container-d" style="padding: 20px ;">
                   <div class="flotty-a">
-                        <img src="../assets/easy tees.jpg" height="70px" width="100px">
+                        <img src="./easy tees.jpg" height="70px" width="100px">
                   </div>
                   <div class="flotty-b">
                         <p> Dresses<br>Cotton free dresses </p>
@@ -266,7 +590,7 @@
        </div>
        <div class="container-e" style="padding: 20px ;">
             <div class="flotty-a">
-                  <img src="../assets/sweat shirts.jpg" height="70px" width="100px">
+                  <img src="./sweat shirts.jpg" height="70px" width="100px">
             </div>
             <div class="flotty-b">
                   <p> Dresses<br>Cotton free dresses </p>
@@ -288,22 +612,22 @@
                   <h4 style="text-align: center ; font-size:18px; font-family: Arial; letter-spacing: 1.5px; word-spacing:normal ; font-weight: lighter;">Appear, dry there darkness they're seas, dry waters.</h4>
                   <div class="last-container" style="display: flex ; justify-content:space-around; padding-top: 47px;" >
                         <div>
-                              <img src="../assets/pic2.jpg" height="160px" width="160">
+                              <img src="./pic2.jpg" height="160px" width="160">
                         </div>
                         <div>
-                              <img src="../assets/1img.jpg" height="160px" width="160">
+                              <img src="./1img.jpg" height="160px" width="160">
                         </div>
                         <div>
-                              <img src="../assets/3img.jpeg" height="160px" width="160">
+                              <img src="./3img.jpeg" height="160px" width="160">
                         </div>
                         <div>
-                              <img src="../assets/pic4.jpg" height="160px" width="160"> 
+                              <img src="./pic4.jpg" height="160px" width="160"> 
                         </div>
                         <div>
-                              <img src="../assets/pic7.jpg" height="160px" width="160">
+                              <img src="./pic7.jpg" height="160px" width="160">
                         </div>
                         <div>
-                              <img src="../assets/pic8.jpg" height="160px" width="160">
+                              <img src="./pic8.jpg" height="160px" width="160">
                         </div>
       
                   </div>
