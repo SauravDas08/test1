@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOTEL Form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <style>
+        section{
+            position: absolute;
+            margin-top: -850px ;
+            width: 98%;
+            
+            background-color: rgba(16, 170, 197, 0.397);
+
+            }
+        li{
+            color: white;  
+            font-weight: 800;
+            font-family: Cambria;  
+            font-size: large;
+            text-shadow: 2px 2px 4px rgb(192, 22, 223);
+            word-spacing: 15px;
+
+        }
+        .Title{
+           font-family:Lucida Handwriting;
+            font-weight:bold ;
+            font-size: 50px;
+            color:rgb(7, 5, 67);
+            word-spacing: 1.2px;
+            letter-spacing: 1.3px;
+            text-shadow: 3px 3px 7px rgba(214, 241, 9, 0.776);
+            margin-left: 25px;
+            margin-top: 7px;
+        }
+       button{
+        background-color:aqua;
+        
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: bolder;
+        
+        margin-bottom: 1px;
+
+       } 
+       
+        
+    </style>
+    
+    <script>
+        function OrderClick(){
+            document.getElementById("lblName").innerHTML = document.getElementById("txtName").value;
+            document.getElementById("lblMobile").innerHTML = document.getElementById("txtMobile").value;
+            document.getElementById("lblDate").innerHTML = document.getElementById("txtDate").value;
+            document.getElementById("lblDays").innerHTML = document.getElementById("txtDays").value;
+            document.getElementById("lblPerson").innerHTML = document.getElementById("txtPerson").value;
+            document.getElementById("lblAdvance").innerHTML = document.getElementById("txtAdvance").value;
+            
+
+            var mealName = "";
+            var adonName = "";
+            var mealCost = 0;
+            var adOnCost = 0;
+            var total = 0;
+            var advance = 0;
+            var balance = 0;
+            var person = 0;
+
+            // Radios
+            var Deluxe = document.getElementById("optBurger");
+            var Suite = document.getElementById("optRoller");
+
+            if(optBurger.checked) {
+                mealName = Deluxe.value;
+                mealCost = 2500*document.getElementById("txtDays").value;
+            }
+
+            if(optRoller.checked){
+                mealName = Suite.value;
+                mealCost = 4000*document.getElementById("txtDays").value;
+              
+            }
+
+            // Checkboxes
+            var Ac = document.getElementById("optKrusher");
+            var Locker = document.getElementById("optWings");
+
+            if(optKrusher.checked) {
+                adonName += Ac.value + " &nbsp; , ";
+                adOnCost = 1000*document.getElementById("txtDays").value;
+                mealCost+=adOnCost;
+            }
+
+            if(optWings.checked) {
+                adonName+=Locker.value + "<br>";
+                adOnCost = 300*document.getElementById("txtDays").value;
+                mealCost+=adOnCost;
+            }
+            
+            total = mealCost;
+           
+           balance = total-document.getElementById("txtAdvance").value;
+
+
+            document.getElementById("lblMeal").innerHTML= mealName;
+            document.getElementById("lblAdon").innerHTML = adonName;
+            document.getElementById("lblTotal").innerHTML = "&#8377;" + total;
+            document.getElementById("lblPayment").innerHTML = balance;
+            
+            
+        }
+
+       
+    </script>
+</head>
+<body class="container-fluid ">
+    <header>
+        <img id="pic" src="../assets/corousel45.jpg" width="100%" height="500px">
+
+        <div class="navbar navbar-expand-lg" style="width: 95%; border-radius: 3px; position: absolute; margin-top: -500px;  " >
+            <button class="navbar-toggler " data-bs-target="#navItems" data-bs-toggle="collapse">
+                <span class="navbar-toggler-icon"></span>
+          </button>
+             <div class="collapse navbar-collapse  id="navItems" style="padding: 1px; margin-left: 25px; margin-right: 30px; display: flex; justify-content: space-between;" > 
+                
+                <div>
+                    <h3 class="Title" >Hotel Kalinga-</h3>
+                </div>
+                <div>
+                      <ul class="navbar-nav" style="font-family: Arial; font-size: 15px; font-weight: 420;">
+                            <li class="nav-item"><span class="bi bi-house"></span>Home</li>&nbsp; &nbsp; 
+                            <li class="nav-item"><span class="bi bi-card-checklist"></span>QuickBook</li>&nbsp; &nbsp; 
+                            <li class="nav-item"><span class="bi bi-currency-dollar"></span>BestValue</li>&nbsp; &nbsp; 
+                            <li class="nav-item"><span class="bi bi-telephone"></span>Help</li>&nbsp; &nbsp; 
+                      
+                      </ul>
+                </div>
+            </div>
+        </div>
+
+        
+        </div>
+    </header>
+
+    <div>
+        <img src="../assets/corousel2.jpg" width="100%" class="mt-1" >
+    
+<section>
+
+   
+    <h4 id="bookingtitle" style=" color:whitesmoke; text-align:center; font-size:40px;background-color: rgb(181, 18, 18); ">Quick Book</h4>
+
+
+    <div class="accordion" id="hotel">
+        <!-- Customer Accordion -->
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <button data-bs-target="#customer" data-bs-toggle="collapse" class="btn btn-primary w-100">Customer Info</button>
+            </div>
+            <div class="accordion-collapse collapse" id="customer" data-bs-parent="#hotel">
+              <div class="accordion-body" style="background-color: rgba(197, 206, 201, 0.719);">
+                 <dl class="row">
+                    <dt class="col-4" >Name:</dt>
+                    <dd class="col-5"><input type="text" id="txtName" class="form-control"></dd>
+                    <dt class="col-4">Mobile No:</dt>
+                    <dd class="col-5"><input type="text" id="txtMobile" class="form-control"></dd>
+                    <dt class="col-4">Checkin Date:</dt>
+                    <dd class="col-5"><input type="datetime-local" id="txtDate" min="today"></dd>
+                    <dt class="col-4">Total No of Days:</dt>
+                    <dd class="col-5"><input type="number" id="txtDays"></dd>
+                    <dt class="col-4">Total No fo Person</dt>
+                    <dd class="col-5"><input type="number" id="txtPerson" min="1" max="5"></dd>
+                    
+                   
+                 </dl>
+              </div>
+            </div>
+        </div>
+
+        <!--Room Accordion radiobutton-->
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <button data-bs-target="#meal" data-bs-toggle="collapse" class="btn btn-primary  w-100">Select Room Type</button>
+            </div>
+            <div class="accordion-collapse collapse" id="meal" data-bs-parent="#hotel">
+              <div class="accordion-body" style="background-color:rgb(110, 210, 238) ;">
+                  <div class="row">
+                    <div class="col">
+                        <div class="card p-1" style="background-color: rgba(233, 30, 105, 0.733);color: white ">
+                            <img src="../assets/room2.jpg" class="card-img-top" height="240">
+                            <div class="card-header">
+                                <h3 style="font-family: Cambria; text-align: center;">Deluxe Room</h3>
+                            </div>
+                            <div class="card-footer" style="background-color: rgba(0, 0, 0, .5); color:white; font-size: 18px;"  >
+                                <input type="radio"  id="optBurger" value="Deluxe Room" name="meal" class="form-check-input"> <label class="form-check-label">&#8377; 2,500/-</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card p-1" style="background-color: rgba(233, 30, 105, 0.733);color: white;  ">
+                            <img src="../assets/room1.jpg" class="card-img-top" height="240">
+                            <div class="card-header">
+                                <h3 style="font-family: Cambria; text-align: center;">Suite Room</h3>
+                            </div>
+                            <div class="card-footer" style="background-color: rgba(0, 0, 0, .5); color:white;font-size: 18px; ">
+                                <input type="radio" id="optRoller" value="Suite Room" name="meal" class="form-check-input"> <label class="form-check-label">&#8377; 4,000/-</label>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+
+        <!--Amenities Accordion check box-->
+
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <button data-bs-target="#adon" data-bs-toggle="collapse" class="btn btn-primary  w-100">Select Amenities</button>
+            </div>
+            <div class="accordion-collapse collapse" id="adon" data-bs-parent="#hotel">
+              <div class="accordion-body" style="background-color:rgba(71, 32, 32,.6) ; " >
+                  <div class="row">
+                    <div class="col">
+                        <div class="card p-1" style="background-color: rgba(209, 20, 108, 0.53);">
+                            <img src="../assets/Ac.jpg" class="card-img-top" height="240">
+                            <div class="card-header">
+                                <h3 style="color:black;font-family: Cambria; text-align: center;">AC</h3>
+                            </div>
+                            <div class="card-footer" >
+                                <input class="form-check-input" id="optKrusher" value="+Ac" type="checkbox"> <label class="form-check-label">&#8377; 1000/- </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card p-1" style="background-color: rgba(53, 153, 22, 0.66);">
+                            <img src="../assets/locker1.jpg" class="card-img-top" height="240">
+                            <div class="card-header">
+                                <h3 style="color:black;font-family: Cambria; text-align: center;">Locker</h3>
+                            </div>
+                            <div class="card-footer" >
+                                <input class="form-check-input" id="optWings" value="+Locker" type="checkbox"> <label class="form-check-label">&#8377; 300/-</label>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+        
+        <!--Advance Accordion-->
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <button data-bs-target="#advance" data-bs-toggle="collapse" class="btn btn-primary   w-100">Advance </button>
+            </div>
+            <div class="accordion-collapse collapse " id="advance" data-bs-parent="#hotel">
+            <div class="accordion-body" style="background-color:darkturquoise; color:black">
+                <dl class="input-group row" >
+                    <dt class=" col-3">Advance Amount</dt>
+                    <dd class="col-8" ><input type="number" " id="txtAdvance" value="opt" class="form-control" min="1500" size="5" step="500"  ></dd>
+                </dl>
+            </div>
+            </div>
+        </div>
+
+    </div>
+
+    
+    <button style="background-color:green; color: rgb(248, 244, 244);font-size: 20px; margin-left: 415px; " data-bs-target="#bill" onclick="OrderClick()" data-bs-toggle="modal" class="btn  w-25">Book Now</button>
+    <div class="modal" id="bill">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Your Bill Summary</h3>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <dl class="row">
+                        <dt class="col-4">Customer Name</dt>
+                        <dd class="col-8" id="lblName"></dd>
+                        <dt class="col-4">Mobile</dt>
+                        <dd class="col-8" id="lblMobile"></dd>
+                        <dt class="col-4">Room</dt>
+                        <dd class="col-8" id="lblMeal"></dd>
+                        <dt class="col-4">Amenities</dt>
+                        <dd class="col-8" id="lblAdon"></dd>
+                        <dt class="col-4">Check in date</dt>
+                        <dd class="col-8" id="lblDate"></dd>
+                        <dt class="col-4">Total Days</dt>
+                        <dd class="col-8" id="lblDays"></dd>
+                        <dt class="col-4">Total Person</dt>
+                        <dd class="col-8" id="lblPerson"></dd>
+                        <dt class="col-4">Total Amount</dt>
+                        <dd class="col-8" id="lblTotal"></dd>
+                        <dt class="col-4">Advance Amount</dt>
+                        <dd class="col-8" id="lblAdvance"></dd>
+                        <dt class="col-4">Payment</dt>
+                        <dd class="col-8" id="lblPayment"></dd>
+
+                    </dl>
+                </div>
+                <div class="modal-footer">
+                    <button data-bs-dismiss="modal" class="btn btn-primary">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</section>
+    </div>
+    
+
+
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+</body>
+</html>
