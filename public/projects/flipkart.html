@@ -63,16 +63,16 @@
 
         function bodyLoad(){
             LoadCategories();
-            LoadProducts("http://fakestoreapi.com/products");
+            LoadProducts("https://fakestoreapi.com/products");
             GetCartItemsCount();
         }
         
         function CategoryChanged(){ //change category when click any category
             var categoryname = document.getElementById("lstCategories").value;
             if(categoryname=="All"){
-                LoadProducts("http://fakestoreapi.com/products");
+                LoadProducts("https://fakestoreapi.com/products");
             }else{
-                LoadProducts(`http://fakestoreapi.com/products/category/${categoryname}`);
+                LoadProducts(`https://fakestoreapi.com/products/category/${categoryname}`);
             }
         }
 
@@ -83,7 +83,7 @@
         }
 
         function AddClick(id){
-            fetch(`http://fakestoreapi.com/products//${id}`)
+            fetch(`https://fakestoreapi.com/products//${id}`)
             .then(function(response){
                 return response.json();
             })
